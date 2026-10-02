@@ -67,4 +67,4 @@ MIT. See [LICENSE](LICENSE).
 
 ⭐ **If you enjoyed the game, star this repo and share it with a friend!**
 
-Made by **Tasin** · Avron
+Made by **Tasin** · 
