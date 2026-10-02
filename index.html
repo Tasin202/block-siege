@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Block Siege</title>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Block Siege</title><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0d121c"><link rel="icon" href="icon-192.png">
 <style>
 :root{--bg:#0d121c;--fg:#f2f5ff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
@@ -164,5 +164,5 @@ else{const b=(n>>3)%4,s=n%8,c=CHD[b];tone(NF(c[[0,1,2,1,2,1,0,1][s]]+12),t,1.5,'
 document.addEventListener('pointerdown',()=>{try{ac=ac||new AudioContext();ac.resume()}catch(e){}});
 setInterval(()=>{if(!ac||!S.set.mus||ac.state!='running')return;const w=st=='play'?'b':'c';if(w!=mtk){mtk=w;mst=0;mnx=ac.currentTime+.1}if(mnx<ac.currentTime)mnx=ac.currentTime+.05;const du=mtk=='b'?60/140/4:60/72/2;while(mnx<ac.currentTime+.3){mus(mtk,mst++,mnx);mnx+=du}},100);
 let lt=0;function lp(t){const dt=Math.min(.05,(t-lt)/1000||0);lt=t;if(G&&st=='play')upd(dt);draw(t/1000);requestAnimationFrame(lp)}
-menu();requestAnimationFrame(lp);
+menu();requestAnimationFrame(lp);if('serviceWorker'in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 </script></body></html>
